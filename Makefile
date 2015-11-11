@@ -19,7 +19,7 @@ SWIGINCLUDES=-I$(SGE_ROOT)/include
 all: _drmaa2.so
 
 clean: 
-	-/bin/rm -f _drmaa2.so drmaa2.py drmaa2_wrap.c drmaa2_wrap.o
+	-/bin/rm -f _drmaa2.so drmaa2.py* drmaa2_wrap.c drmaa2_wrap.o __pycache__/
 
 _drmaa2.so: drmaa2_wrap.o
 	$(LD) $(LDFLAGS) $< -o $@ $(LIBS)
